@@ -12,7 +12,7 @@ void read_matrix(int **matrix, int m, int n){
     }
 }
 
-void display(int **matrix, int m, int n){ //method to pass double pointer to the function
+void display(int **matrix, int m, int n){ //method to pass double pointer to the function...
     for(int i=0; i<m; i++){
         for(int j=0; j<n; j++){
             cout<<matrix[i][j]<<" ";
