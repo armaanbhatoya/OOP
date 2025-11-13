@@ -19,7 +19,9 @@ int main(){
     cout<<"after changing, deskOwner : "<<*p<<endl;
 
     // p = &anotherPerson;
-    cout<<"Changing to another person: "<<*p<<endl;
+    // cout<<"Changing to another person: "<<*p<<endl;
+
+    // Because p is declared as a constant pointer (string* const), it cannot be reassigned to point to another object. It is permanently bound to deskOwner.
     
     return 0;
 }   

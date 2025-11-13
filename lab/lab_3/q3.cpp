@@ -33,3 +33,4 @@ int main(){
 
     return 0;
 }
+// When we modify through the pointer (*p = "ABC";), the actual string object (book2) gets changed. The pointer doesn’t store its own copy — it directly refers to the original variable.

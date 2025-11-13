@@ -15,40 +15,40 @@
 // class.
 
 
-//correct code----->
+
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
 
-// Global variable: count total borrowing sessions
+
 int totalSessions = 0;
 
 void BorrowBooks() {
-    // Non-static local variable: librarian's name
+    
     string librarianName;
     cout << "Enter librarian name for this session: ";
     cin >> librarianName;
 
-    // Static local variable: count how many times BorrowBooks() has been called
+    
     static int functionCallCount = 0;
     functionCallCount++;
 
-    //  Illegal attempt (for report documentation):
+   
     /*
     class Book {
         static int bookCounter;   // ERROR: local class cannot have static data member
     };
     */
 
-    // Correct alternative: static variable inside function
+   
     static int bookCounter = 0;
 
-    // Local class definition
+   
     class Book {
         string title;
         int id;
-        string librarian;   // store librarian name for this book/session
+        string librarian;   
     public:
         Book(string t, int i, string lib) : title(t), id(i), librarian(lib) {}
 
@@ -60,7 +60,7 @@ void BorrowBooks() {
         }
     };
 
-    // Input books for this session
+    
     int n;
     cout << "Enter number of books to borrow: ";
     cin >> n;
@@ -77,10 +77,10 @@ void BorrowBooks() {
         bookCounter++;
     }
 
-    // Update global sessions
+    
     totalSessions++;
 
-    // Display session summary
+    
     cout << "\n--- Borrowed Books (Session Summary) ---\n";
     for (auto &b : borrowed) {
         b.display(totalSessions, functionCallCount);
