@@ -35,7 +35,7 @@ int main(){
     // |--------------------------PART 3 ------------------------------------------|
 
     ofstream out;
-    out.open("sample.txt");
+    // out.open("sample.txt");      //using member function open
     out<<"This is my file \n";
     out<<"Who I am \n";
     out<<"Also";
