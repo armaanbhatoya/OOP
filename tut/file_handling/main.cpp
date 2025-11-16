@@ -7,7 +7,7 @@ int main(){
 
     // string st = "Armaan";
     // string st2;
-    // // // opening file using constructor and writing it
+    // // // opening file using ***constructor*** and writing it
     // // ofstream out("sample.txt"); //write operation
     // // out<<st;
 
@@ -32,7 +32,7 @@ int main(){
     // getline(hin,content);
     // cout<<"This is the content in the file : "<<content<<endl;
 
-    // |--------------------------PART 3 ---------------------------------------------------|
+    // |--------------------------PART 3 ------------------------------------------|
 
     ofstream out;
     out.open("sample.txt");
