@@ -36,21 +36,24 @@ int main(){
 
     ofstream out;
     out.open("sample.txt");
-    out<<"This is my file ";
+    out<<"This is my file \n";
     out<<"Who I am \n";
     out<<"Also";
     out.close();
 
-    ifstream in;
+    ifstream file;
     string st,st2;
-    in.open("sample.txt");
-    // in>>st>>st2;
+    file.open("sample.txt");
+    // file>>st>>st2;
     // cout<<st<<st2;
-    while(in.eof()==0){  //eof() only becomes true if you have gone past EOF
-        in>>st;
-        cout<<st;
+
+    cout<<"This is the exact content of the file opened :->"<<endl;
+    while(file.eof()==0){  //eof() only becomes true if you have gone past EOF
+        // file>>st;
+        getline(file,st);
+        cout<<st<<endl;
     }     
-    in.close();
+    file.close();
 
     return 0;
 }
