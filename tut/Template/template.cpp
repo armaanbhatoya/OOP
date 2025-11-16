@@ -14,7 +14,7 @@ class vector{
         int dotProduct(vector &v){
             int d = 0;
             for(int i=0; i<size; i++){
-                d += this->arr[i] * arr[i];
+                d += this->arr[i] * v.arr[i];
             }
             return d;
         }
@@ -27,10 +27,11 @@ int main(){
     v1.arr[2] = 2;
     
     vector v2(3);
-    v2.arr[0]=4;
+    v2.arr[0]=2;
     v2.arr[1]=3;
-    v2.arr[3]=2;
+    v2.arr[2]=4;
 
-    cout<< v1.dotProduct(v2)<<endl;
+    int a = v1.dotProduct(v2);
+    cout<< a<<endl;
     return 0;
 }
