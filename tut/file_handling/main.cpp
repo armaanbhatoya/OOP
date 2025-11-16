@@ -26,5 +26,11 @@ int main(){
     hout<<"My name is "<<st;
     hout.close();
 
+    ifstream hin("sample.txt");
+    string content;
+    // hin>>content;
+    getline(hin,content);
+    cout<<"This is the content in the file : "<<content<<endl;
+
     return 0;
 }
