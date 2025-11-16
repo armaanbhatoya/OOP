@@ -42,24 +42,67 @@ using namespace std;
 // |----------------------PART 2-----------------------------|
 // ------------Templates with Multiple Parameters------------
 
-template<class T1, class T2>
-class myClass{
-    public:
-        T1 data1;
-        T2 data2;
-        myClass(T1 a, T2 b){
-            data1 = a;
-            data2 = b;
-        }
-        void display(){
-            cout<<this->data1<<endl<<this->data2<<endl;
-        }
+// template<class T1, class T2>
+// class myClass{
+//     public:
+//         T1 data1;
+//         T2 data2;
+//         myClass(T1 a, T2 b){
+//             data1 = a;
+//             data2 = b;
+//         }
+//         void display(){
+//             cout<<this->data1<<endl<<this->data2<<endl;
+//         }
+// };
+
+// int main() {
+//     // Creating an object with char and float data types
+//     myClass<char, float>  obj('C', 1.8);
+//     obj.display();
+
+//     return 0;
+// }
+
+
+// |-------------------PART 3 ------------------------------------------|
+//  DEFAULT PARAMETERS
+
+
+// Class template definition with default parameters
+template <class T1= int, class T2 = float, class T3 = char>
+class Harry {
+public:
+    T1 a;
+    T2 b;
+    T3 c;
+
+    // Constructor to initialize member variables
+    Harry(T1 x, T2 y, T3 z) {
+        a = x;
+        b = y;
+        c = z;
+    }
+
+    // Function to display the values
+    void display() {
+        std::cout << "The value of a is " << a << std::endl;
+        std::cout << "The value of b is " << b << std::endl;
+        std::cout << "The value of c is " << c << std::endl;
+    }
 };
 
 int main() {
-    // Creating an object with char and float data types
-    myClass<char, float>  obj('C', 1.8);
-    obj.display();
+    // Using default template parameters (int, float, char)
+    Harry<float> h(4, 6.4, 'c');
+    h.display();
+
+    cout << endl; // For better output separation
+
+    // Specifying custom template parameters (float, char, char)
+    Harry<int, float> g(1.4, 'o', 'c');
+    g.display();
 
     return 0;
 }
+
