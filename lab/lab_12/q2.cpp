@@ -8,7 +8,7 @@ public:
         cout << "Base constructor called\n";
     }
 
-    virtual ~Base() {   // make it virtual to ensure proper cleanup  **************
+    virtual ~Base() {   // make it virtual to ensure proper cleanup 
         cout << "Base destructor called\n";
     }
 };
