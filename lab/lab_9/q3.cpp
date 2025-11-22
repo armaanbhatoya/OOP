@@ -31,5 +31,7 @@ public:
 int main()
 {
     D d;
+    C a;
+    a.show();
     return 0;
 }
